@@ -19,6 +19,18 @@
     Footer
   -->
 
+    <header>
+      <div
+        class="m-auto flex flex-row place-content-center space-x-4 bg-slate-600 p-3 text-xs text-white"
+      >
+        <p>Fri fragt</p>
+        <p>|</p>
+        <p>Dag-til-dag levering</p>
+        <p>|</p>
+        <p>Bæredygtig print</p>
+      </div>
+    </header>
+
     <!-- Navigation -->
 
     <div class="">
@@ -753,7 +765,7 @@
 
     <!-- Testimonials start -->
 
-    <div class="mb-8 mt-40 text-center">
+    <div class="mb-8 mt-20 text-center">
       <h2 class="text-4xl font-bold">Testimonials</h2>
       <p class="text-lg text-gray-600">What others say about us</p>
     </div>
@@ -824,6 +836,45 @@
     </div>
 
     <!-- Testiminals slut -->
+
+    <!-- Start Om kunstneren -->
+
+    <div class="bg-white py-16">
+      <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+        <div class="mt-10 space-y-6 md:flex md:gap-6 md:space-y-0 lg:gap-12">
+          <div class="md:5/12 lg:w-5/12">
+            <img
+              src="content/pige_maler.jpg"
+              alt="image"
+              loading="lazy"
+              width=""
+              height=""
+            />
+          </div>
+          <div class="md:7/12 lg:w-6/12">
+            <h2 class="mt-10 text-2xl font-bold text-gray-900 md:text-4xl">
+              "Kunst fik mig på rette vej"
+            </h2>
+            <p class="mt-6 text-gray-600">
+              I 2020 fik gik jeg ned med stress og måtte sygemnelde mig fra
+              arbejdet. Min psykolog sagde jeg burde finde mig en hoppy så jeg
+              kunne fordybe mig i noget andet end hverdag.
+            </p>
+            <p class="mt-4 text-gray-600">
+              Jeg begyndte at få gang i penselerne og får hvert penselstrøg fik
+              jeg det bedre.
+            </p>
+            <button
+              class="mt-4 bg-gray-800 px-4 py-3 text-white hover:bg-white hover:text-gray-800"
+            >
+              <a href="shop.html">LÆS MERE OM KUNSTEREN</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slut om kunstneren -->
 
     <!-- Highlight start -->
 
@@ -936,6 +987,179 @@
     <!-- Highlight slut  -->
 
     <!-- Content slut-->
+
+    <!-- Kontakt Popup -->
+
+    <!-- Web3Forms Popup Widget Starts here -->
+    <div
+      id="web3forms__widget"
+      x-data="{ open: true }"
+      x-init="() => setTimeout(() => open = false, 2000)"
+    >
+      <!-- x-init is only for demo purpose. you may remove it.  -->
+      <div
+        id="w3f__widget--content"
+        x-show="open"
+        x-transition:enter-start="opacity-0 translate-y-5"
+        x-transition:enter="transition duration-200 transform ease"
+        x-transition:leave="transition duration-200 transform ease"
+        x-transition:leave-end="opacity-0 translate-y-5"
+        @click.away="open = false"
+        class="fixed bottom-[100px] top-0 right-0 left-0 z-50 flex h-auto h-[calc(100%-95px)] min-h-[250px] w-full flex-col overflow-auto rounded-md border border-gray-300 bg-white shadow-2xl sm:top-auto sm:right-5 sm:left-auto sm:h-[600px] sm:w-[350px]"
+      >
+        <div
+          class="flex h-32 flex-col items-center justify-center bg-pink-400 p-5"
+        >
+          <h3 class="text-lg text-white">Hvordan kan vi hjælpe?</h3>
+          <p class="text-white opacity-50">Vi svarer indefor få timer</p>
+        </div>
+        <div class="flex-grow bg-gray-50 p-6">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            id="form"
+            class="needs-validation"
+            novalidate
+          >
+            <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE" />
+            <input
+              type="hidden"
+              name="subject"
+              value="New Submission from Web3Forms"
+            />
+            <input
+              type="checkbox"
+              name="botcheck"
+              id=""
+              style="display: none"
+            />
+
+            <div class="mb-4">
+              <label
+                for="full_name"
+                class="mb-2 block text-sm text-gray-600 dark:text-gray-400"
+                >Full Navn</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="full_name"
+                placeholder="Hans Hansen"
+                required
+                class="w-full rounded-md border border-gray-300 bg-white px-3 py-2 placeholder-gray-300 focus:border-indigo-300 focus:outline-none focus:ring focus:ring-indigo-100"
+              />
+              <div
+                class="empty-feedback invalid-feedback mt-1 text-sm text-red-400"
+              >
+                Skriv dit fuldenavn.
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="email"
+                class="mb-2 block text-sm text-gray-600 dark:text-gray-400"
+                >Email Addresse</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="din@email.com"
+                required
+                class="w-full rounded-md border border-gray-300 bg-white px-3 py-2 placeholder-gray-300 focus:border-indigo-300 focus:outline-none focus:ring focus:ring-indigo-100"
+              />
+              <div class="empty-feedback mt-1 text-sm text-red-400">
+                Skriv din rigtige e-mailadresse.
+              </div>
+              <div class="invalid-feedback mt-1 text-sm text-red-400">
+                Skriv din rigtige e-mailadresse.
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="message"
+                class="mb-2 block text-sm text-gray-600 dark:text-gray-400"
+                >Din besked</label
+              >
+
+              <textarea
+                rows="4"
+                name="message"
+                id="message"
+                placeholder="Din Besked"
+                class="h-28 w-full rounded-md border border-gray-300 bg-white px-3 py-2 placeholder-gray-300 focus:border-indigo-300 focus:outline-none focus:ring focus:ring-indigo-100"
+                required
+              ></textarea>
+              <div
+                class="empty-feedback invalid-feedback mt-1 text-sm text-red-400"
+              >
+                Skriv besked.
+              </div>
+            </div>
+            <div class="mb-3">
+              <button
+                type="submit"
+                class="w-full rounded-md bg-pink-400 px-3 py-4 text-white focus:bg-pink-600 focus:outline-none"
+              >
+                Send Besked
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <button
+        id="w3f__widget--btn"
+        @click="open = !open"
+        class="ease fixed right-5 bottom-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-pink-400 shadow-lg transition duration-300 hover:bg-pink-600 focus:bg-pink-600 focus:outline-none"
+      >
+        <svg
+          class="absolute h-6 w-6 text-white"
+          x-show="!open"
+          x-transition:enter-start="opacity-0 -rotate-45 scale-75"
+          x-transition:enter="transition duration-200 transform ease"
+          x-transition:leave="transition duration-100 transform ease"
+          x-transition:leave-end="opacity-0 -rotate-45"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+          ></path>
+        </svg>
+
+        <svg
+          class="absolute h-6 w-6 text-white"
+          x-show="open"
+          x-transition:enter-start="opacity-0 rotate-45 scale-75"
+          x-transition:enter="transition duration-200 transform ease"
+          x-transition:leave="transition duration-100 transform ease"
+          x-transition:leave-end="opacity-0 rotate-45"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Popup -->
 
     <!-- Footer -->
     <footer class="bg-gray-800">
@@ -1193,5 +1417,28 @@
     animation-fill-mode: both;
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
+  }
+
+  .invalid-feedback,
+  .empty-feedback {
+    display: none;
+  }
+
+  .was-validated :placeholder-shown:invalid ~ .empty-feedback {
+    display: block;
+  }
+
+  .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+    display: block;
+  }
+
+  .is-invalid,
+  .was-validated :invalid {
+    border-color: #dc3545;
+  }
+
+  .is-invalid,
+  .was-validated :invalid:focus {
+    --tw-ring-color: rgba(220, 53, 69, 0.2);
   }
 </style>
